@@ -1,0 +1,46 @@
+<!-- views/home.hbs -->
+<h1>Panel de Control - Esports</h1>
+<p>Fecha de acceso: {{fechaActual}}</p>
+<a href="/status">Ver estado</a>
+<a href="/player">Ver jugadores</a>
+<a href="/team">Ver equipos</a>
+<hr>
+
+<h2>Lista de Jugadores y sus Equipos</h2>
+
+<table border="1" style="width: 100%; text-align: left; border-collapse: collapse;">
+    <thead>
+        <tr style="background-color: #f2f2f2;">
+            <th>ID</th>
+            <th>Nickname</th>
+            <th>Nombre Completo</th>
+            <th>Rol</th>
+            <th>Equipo Asociado</th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each jugadores}}
+
+
+        <tr>
+            <td>{{this.id}}</td>
+            <td>
+            {{this.nickname}} 
+            {{#if this.isCaptain}} 
+        <span style="background-color: gold; padding: 2px 5px; border-radius: 5px; font-size: 0.8em;">⭐ CAPITÁN</span>
+            {{/if}}
+             </td>
+            <td><strong>{{this.nickname}}</strong></td>
+            <td>{{this.fullname}}</td>
+            <td>{{this.role}}</td>
+            <td>
+                {{#if this.team}}
+                    <span style="color: blue;">{{this.team.name}}</span> ({{this.team.game}})
+                {{else}}
+                    <span style="color: red;">Sin equipo</span>
+                {{/if}}
+            </td>
+        </tr>
+        {{/each}}
+    </tbody>
+</table>
