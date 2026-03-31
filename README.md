@@ -66,16 +66,8 @@ Uso de **Handlebars** para renderizar una tabla HTML en tiempo real que muestra:
 
 ##  Instalación y Configuración
 
-1.  **Clonar el repositorio.**
-2.     ```bash
+1.  **Clonar el repositorio.** mediante "git clone https://github.com/kevynceledon-ui/node-express-abp6.git "
 
-   git clone [https://github.com/kevynceledon-ui/node-express-abp6.git]
-
-   (https://github.com/kevynceledon-ui/node-express-abp6.git)
-
-   cd node-express-abp6
-
-   ```
 3.  **Instalar dependencias:** `npm install`.
 4.  **Configurar variables de entorno:** Crear un archivo `.env` con las credenciales de PostgreSQL (`DB_USER`, `DB_PASSWORD`, `DB_NAME`, etc.).
 5.  **Iniciar el servidor:** 
